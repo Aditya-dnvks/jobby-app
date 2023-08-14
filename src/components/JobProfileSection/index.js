@@ -136,29 +136,11 @@ class JobProfileSection extends Component {
   }
 
   renderJobDetails = () => {
-    const {jobsList, searchInput} = this.state
+    const {jobsList} = this.state
     const jobsDisplay = jobsList.length > 0
 
     return (
       <div className="details-container">
-        <div className="search-input">
-          <input
-            type="search"
-            className="search"
-            placeholder="Search"
-            value={searchInput}
-            onChange={this.changeSearchInput}
-            onKeyDown={this.onEnterKey}
-          />
-          <button
-            type="button"
-            data-testid="searchButton"
-            className="search-button"
-            onClick={this.getJobDetails}
-          >
-            <BsSearch className="search-icon" />
-          </button>
-        </div>
         {jobsDisplay ? (
           <ul className="job-details-item-container">
             {jobsList.map(eachData => (
@@ -241,6 +223,24 @@ class JobProfileSection extends Component {
           />
         </div>
         <div className="responsive-items">
+          <div className="search-input">
+            <input
+              type="search"
+              className="search"
+              placeholder="Search"
+              value={searchInput}
+              onChange={this.changeSearchInput}
+              onKeyDown={this.onEnterKey}
+            />
+            <button
+              type="button"
+              data-testid="searchButton"
+              className="search-button"
+              onClick={this.getJobDetails}
+            >
+              <BsSearch className="search-icon" />
+            </button>
+          </div>
           {this.renderJobProfileDetailsList()}
         </div>
       </div>
