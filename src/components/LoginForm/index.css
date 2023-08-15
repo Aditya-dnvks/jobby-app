@@ -2,8 +2,17 @@
   background-color: #000000;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.credentials {
+  text-align: center;
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #ff0b37;
+  margin-bottom: 40px;
 }
 .card-container {
   display: flex;
