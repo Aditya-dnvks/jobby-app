@@ -100,6 +100,10 @@ class LoginForm extends Component {
 
     return (
       <div className="jobby-app-container">
+        <p className="credentials">
+          Login Credentials: Username is &quot;rahul&quot; , Password is
+          &quot;rahul@2021&quot;
+        </p>
         <div className="card-container">
           <img
             src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
